@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Ucapan Romantis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 25% 30%, #fff4f7 10%, transparent 60%),
+    radial-gradient(ellipse at 85% 60%, #ffe5f0 15%, transparent 59%),
+    linear-gradient(135deg, #fea3aa 0%, #fc7eaf 100%);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+.hearts {
+  position: fixed;
+  width: 100vw; height: 100vh; left: 0; top: 0; z-index: 0;
+  pointer-events: none;
+}
+.heart {
+  position: absolute;
+  width:32px; height:32px;
+  background: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2764.png') no-repeat center center;
+  background-size: contain;
+  animation: fall 3s infinite;
+  opacity: 0.7;
+}
+@keyframes fall {
+  0% { transform: translateY(-50px) scale(1) rotate(0deg); opacity:0.9;}
+  100% { transform: translateY(85vh) scale(1.18) rotate(20deg); opacity:0.13;}
+}
+.center-card {
+  max-width:500px;
+  margin: 80px auto 35px;
+  background: linear-gradient(145deg,#fff5fb 80%, #f9a8d4 100%);
+  border-radius: 29px;
+  border: 2.9px solid #f0c10a;
+  box-shadow: 0 12px 38px rgba(184, 22, 71, 0.17),
+              0 2px 16px #fcc6d2 inset;
+  padding:56px 38px 37px 38px;
+  position:relative;
+  z-index:1;
+  animation: appear 1.8s cubic-bezier(.58,.39,.38,1.1);
+}
+@keyframes appear {
+  0%{transform:scale(.85) translateY(40px);opacity:0}
+  100%{transform:scale(1) translateY(0);opacity:1}
+}
+.card-ornaments {
+  position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;
+  pointer-events:none;
+}
+.card-ornaments::before,
+.card-ornaments::after {
+  content:'';
+  position:absolute;
+  border:2.8px dashed #f3c500;
+  border-radius:18px;
+}
+.card-ornaments::before {
+  width:96%;height:93%;left:2%;top:4%;
+  opacity:.35;pointer-events:none;
+}
+.card-ornaments::after {
+  width:90%;height:84%;left:5%;top:9%;
+  opacity:.22;
+}
+.teks-ucapan {
+  font-size:1.14em;
+  color:#b30759;
+  line-height:2.09em;
+  text-align:center;
+  letter-spacing:0.45px;
+  font-family:'Segoe UI',Arial;
+  position:relative;
+  z-index:2;
+}
+.teks-ucapan .baris {
+  margin-bottom:13px;
+}
+.gallery-title {
+  max-width:500px;
+  margin: 12px auto 4px;
+  color:#c80d6c;
+  font-size:1.09em;
+  text-align:center;
+  font-weight:600;
+  letter-spacing:.6px;
+}
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 13px;
+  max-width: 520px;
+  margin: 0 auto 35px auto;
+  padding: 13px 2vw 3vw 2vw;
+  z-index:1; position:relative;
+}
+.grid-gallery img {
+  width:100%; height:145px; object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 2px 14px rgba(148,0,38,0.08);
+  border:2px solid #fcc;
+  background:#fff;
+  transition: transform 0.2s;
+}
+.grid-gallery img:hover { transform:scale(1.07);}
+@media(max-width: 600px) {
+  .center-card {max-width:97vw; padding:22px 7vw 14px;}
+  .teks-ucapan {font-size:.98em;}
+  .gallery-title {max-width:95vw;}
+  .grid-gallery {max-width:96vw;}
+  .grid-gallery img{height:84px;}
+}
+</style>
+</head>
+<body>
+<!-- Efek hati berjatuhan -->
+<div class="hearts" id="hearts"></div>
+<!-- Kartu ucapan -->
+<div class="center-card">
+  <div class="card-ornaments"></div>
+  <div class="teks-ucapan">
+    <div class="baris">Aku nggak jatuh cinta karena kata-kata manis atau momen dramatis.</div>
+    <div class="baris">Aku jatuh cinta karena caramu bikin dunia yang berantakan terasa tenang.</div>
+    <div class="baris">Karena kamu nggak pernah pura-pura menjadi orang lain.</div>
+    <div class="baris">Karena kamu hadir ketika banyak orang cuma bilang peduli.</div>
+    <div class="baris">Kamu bukan yang sempurna, dan aku juga jauh dari sempurna.</div>
+    <div class="baris">Tapi aku nggak butuh kesempurnaan—aku cuma butuh kamu tetap jadi kamu,</div>
+    <div class="baris">dan izinkan aku terus belajar mencintaimu setiap hari.</div>
+  </div>
+</div>
+<!-- Grid galeri foto -->
+<div class="gallery-title">Kenangan bersama kamu</div>
+<div class="grid-gallery">
+  <img src="assets/images/IMG-20251125-WA0001.jpg" alt="Foto 1">
+  <img src="assets/images/IMG-20251125-WA0002.jpg" alt="Foto 2">
+  <img src="assets/images/IMG-20251125-WA0003.jpg" alt="Foto 3">
+  <img src="assets/images/IMG-20251125-WA0004.jpg" alt="Foto 4">
+  <img src="assets/images/IMG-20251125-WA0005.jpg" alt="Foto 5">
+  <img src="assets/images/IMG-20251125-WA0006.jpg" alt="Foto 6">
+  <img src="assets/images/IMG-20251125-WA0007.jpg" alt="Foto 7">
+  <img src="assets/images/IMG-20251125-WA0008.jpg" alt="Foto 8">
+</div>
+<!-- Audio autoplay, tidak terlihat di tampilan website -->
+<audio id="myAudio" autoplay loop style="display:none;">
+  <source src="assets/audio/I-Just-Called-To-Say-I-Love-You.mp3" type="audio/mpeg">
+</audio>
+<script>
+  // Efek hati berjatuhan
+  function randomBetween(a, b) { return Math.random()*(b-a)+a; }
+  const heartsCont = document.getElementById('hearts');
+  const n = 23;
+  for(let i=0; i<n; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = randomBetween(1,95)+"vw";
+    heart.style.animationDelay = (randomBetween(0,3.3))+"s";
+    heart.style.top = '-60px';
+    heartsCont.appendChild(heart);
+  }
+  // Audio autoplay untuk Chrome Safari (user gesture)
+  window.addEventListener('DOMContentLoaded', function(){
+    var audio = document.getElementById('myAudio');
+    audio.volume = 0.6;
+    audio.play().catch(()=>{});
+  });
+</script>
+</body>
+</html>
